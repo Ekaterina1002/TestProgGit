@@ -65,7 +65,12 @@ public:
        total_price = c* getPrice();;
        total_weight = c* getWeight();
      }
- 
+    void showData()   const
+    {
+        cout<<"\nТоварів куплено:  "<<setw(8)<<col<<" кг";
+        cout<<"\nНа суму:        "<<setw(8)<<total_price<<" грн";
+        cout<<"\nВага разом:       "<<setw(8)<<total_weight<<" кг"<<endl;
+    }
 };
  
 class Check:private Buy
@@ -80,6 +85,7 @@ class Check:private Buy
       void showData()  const
       {
         Product::showData();
+        Buy::showData();
      }
 };
  
